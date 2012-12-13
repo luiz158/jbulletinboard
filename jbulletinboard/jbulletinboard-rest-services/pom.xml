@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+	http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+        <artifactId>jbulletinboard</artifactId>
+        <groupId>com.sivalabs</groupId>
+        <version>0.0.1</version>
+    </parent>
+
+  <artifactId>jbulletinboard-rest-services</artifactId>
+  <packaging>war</packaging>
+
+  <name>jbulletinboard restful services</name>
+  <url>http://sivalabs.blogspot.in</url>
+  <description>JBulletinBoard RESTful services Module</description>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+	
+	<build>
+		<finalName>jbb-rest-services</finalName>		
+	</build>
+	
+	
+  	<dependencies>
+  			<dependency>
+  				<artifactId>jbulletinboard-services</artifactId>
+		        <groupId>com.sivalabs</groupId>
+		        <version>${project.version}</version>
+  			</dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+            </dependency>
+            <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<scope>test</scope>
+			</dependency>
+        
+	        <dependency>
+	          <groupId>javax.servlet</groupId>
+	          <artifactId>servlet-api</artifactId>
+	          <scope>provided</scope>
+	      </dependency>
+  </dependencies>
+  
+</project>
