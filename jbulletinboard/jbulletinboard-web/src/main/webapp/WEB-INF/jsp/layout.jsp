@@ -1,3 +1,4 @@
+<%@page import="com.sivalabs.jbb.web.UserController"%>
 <%@include file="taglib.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -32,13 +33,13 @@
           <a class="brand" href="welcome">JBulletinBoard</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="http://www.sivalabs.in" class="navbar-link">Siva</a>&nbsp;
+              Logged in as <a href="#" class="navbar-link"><%=UserController.getLoggedinUser().getUsername() %></a>&nbsp;
               <a href="../j_spring_security_logout">Logout</a>
             </p>
             <ul class="nav">
               <li class="active"><a href="welcome">Home</a></li>
-              <li><a href="http://www.sivalabs.in">About</a></li>
-              <li><a href="http://www.sivalabs.in">Contact</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
         </div>

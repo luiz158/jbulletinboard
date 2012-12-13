@@ -6,7 +6,9 @@ DROP TABLE IF EXISTS posts;
 DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS forums;
 DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS roles;
 DROP TABLE IF EXISTS users;
+
 
 /*Table structure for table users */
 
@@ -27,8 +29,25 @@ CREATE TABLE users
 
 /*Data for the table users */
 
-insert  into users(user_id,created_on,email,name,password,updated_on,username) values (1,now(),'siva@gmail.com','Siva Prasad','siva',NULL,'siva');
-insert  into users(user_id,created_on,email,name,password,updated_on,username) values (2,now(),'admin@gmail.com','Administrator','admin',NULL,'admin');
+insert  into users(user_id,created_on,email,name,password,updated_on,username) values (1,now(),'admin@gmail.com','Administrator','admin',NULL,'admin');
+insert  into users(user_id,created_on,email,name,password,updated_on,username) values (2,now(),'siva@gmail.com','Siva Prasad','siva',NULL,'siva');
+
+
+CREATE TABLE roles (
+  role_id int(11) NOT NULL AUTO_INCREMENT,
+  rolename varchar(255) NOT NULL,
+  user_id int(11) NOT NULL,
+  PRIMARY KEY (role_id),
+  KEY FK67A8EBD712B8129 (user_id),
+  CONSTRAINT FK67A8EBD712B8129 FOREIGN KEY (user_id) REFERENCES users (user_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+/*Data for the table roles */
+
+
+insert  into roles(role_id,rolename,user_id) values (1,'ROLE_USER',1);
+insert  into roles(role_id,rolename,user_id) values (2,'ROLE_ADMIN',1);
+insert  into roles(role_id,rolename,user_id) values (3,'ROLE_USER',2);
 
 /*Table structure for table categories */
 
