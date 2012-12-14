@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sivalabs</groupId>
   <artifactId>jbulletinboard</artifactId>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
   <version>0.0.1</version>
   <name>quickstart-web-app Maven Webapp</name>
   
   <url>http://sivalabs.blogspot.in</url>
-  <description>ChitChat : A Forum Software developed using Java.</description>
+  <description>JBulletinBoard : A Forum Software developed using Java.</description>
   
   <properties>
   		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,20 +60,12 @@
         
     </properties>
 	
-	<modules>
+	<!-- <modules>
 	    <module>jbulletinboard-services</module>
 	    <module>jbulletinboard-rest-services</module>
 		<module>jbulletinboard-web</module>
-  </modules>
+  </modules> -->
   	
-	<dependencies>
-		<dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <scope>test</scope>
-         </dependency>
-	</dependencies>
-	
 	
 	<build>
 	
@@ -166,8 +158,6 @@
 		
     </repositories>
     
-	<dependencyManagement>
-
     <dependencies>
     
         <!--  Spring -->
@@ -293,7 +283,7 @@
 		     </dependency>  
 		     <dependency>  
 		       <groupId>org.springframework.security</groupId>  
-		       <artifactId>spring-security-aclspring-security-acl</artifactId>  
+		       <artifactId>spring-security-acl</artifactId>  
 		       <version>${spring-security.version}</version>  
 		     </dependency>
 		     
@@ -506,6 +496,5 @@
 			</exclusions>
 			</dependency>
     	</dependencies>
-	</dependencyManagement>
 	
 </project>
